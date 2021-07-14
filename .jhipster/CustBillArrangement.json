@@ -1,0 +1,82 @@
+{
+  "name": "CustBillArrangement",
+  "fields": [
+    {
+      "fieldName": "billArrangementId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "statementAccNo",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "billAccNo",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "dueDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "cycleDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "promiseToPayDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "startDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "statusDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "statusReason",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "statementFormatId",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "autoPay",
+      "otherEntityRelationshipName": "custBillArrangement",
+      "relationshipName": "autoPay",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "customer",
+      "otherEntityRelationshipName": "custBillArrangement",
+      "relationshipName": "customer",
+      "ownerSide": false
+    }
+  ],
+  "entityTableName": "cust_bill_arrangement",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "CustomerManagement",
+  "clientRootFolder": "CustomerManagement",
+  "databaseType": "sql",
+  "changelogDate": "20210714132832"
+}
