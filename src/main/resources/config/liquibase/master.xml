@@ -15,7 +15,64 @@
     <property name="datetimeType" value="datetime" dbms="oracle, mssql, postgresql, h2"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132831_added_entity_Customer.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132832_added_entity_CustBillArrangement.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132833_added_entity_CustCommunicationRef.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132834_added_entity_CustChar.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132835_added_entity_CustSecurityChar.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132836_added_entity_CustPasswordChar.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132837_added_entity_CustBillingAcc.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132838_added_entity_CustCreditProfile.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132839_added_entity_CustPaymentMethod.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132840_added_entity_CustContact.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132841_added_entity_CustContactChar.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132842_added_entity_GeographicSiteRef.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132843_added_entity_CustIsvRef.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132844_added_entity_CustIsvChar.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132845_added_entity_RoleTypeRef.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132846_added_entity_CustRelParty.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132847_added_entity_ShoppingSessionRef.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132848_added_entity_Individual.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132849_added_entity_IndAuditTrial.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132850_added_entity_IndContact.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132851_added_entity_IndContactChar.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132852_added_entity_IndChar.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132853_added_entity_Department.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132854_added_entity_IndActivation.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132855_added_entity_NewsLetterType.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132856_added_entity_Industry.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132857_added_entity_CustNewsLetterConfig.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132858_added_entity_IndNewsLetterConf.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132859_added_entity_AutoPay.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132900_added_entity_Eligibility.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132901_added_entity_CreditCheckVerification.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132902_added_entity_BankCardType.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132903_added_entity_CustStatistics.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132904_added_entity_CustBillingRef.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20210714132831_added_entity_constraints_Customer.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132832_added_entity_constraints_CustBillArrangement.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132833_added_entity_constraints_CustCommunicationRef.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132834_added_entity_constraints_CustChar.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132835_added_entity_constraints_CustSecurityChar.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132836_added_entity_constraints_CustPasswordChar.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132838_added_entity_constraints_CustCreditProfile.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132840_added_entity_constraints_CustContact.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132843_added_entity_constraints_CustIsvRef.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132844_added_entity_constraints_CustIsvChar.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132846_added_entity_constraints_CustRelParty.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132847_added_entity_constraints_ShoppingSessionRef.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132848_added_entity_constraints_Individual.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132849_added_entity_constraints_IndAuditTrial.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132850_added_entity_constraints_IndContact.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132851_added_entity_constraints_IndContactChar.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132852_added_entity_constraints_IndChar.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132856_added_entity_constraints_Industry.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132857_added_entity_constraints_CustNewsLetterConfig.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132858_added_entity_constraints_IndNewsLetterConf.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132902_added_entity_constraints_BankCardType.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132903_added_entity_constraints_CustStatistics.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210714132904_added_entity_constraints_CustBillingRef.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>
