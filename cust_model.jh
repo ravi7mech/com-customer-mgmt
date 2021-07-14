@@ -1,0 +1,340 @@
+entity Customer {
+  	name String required,
+	formattedName String required,
+	tradingName String required,
+	custType String required,
+    title String required,
+    firstName String required,
+    lastName String required,
+    middleName String,
+    dateOfBirth LocalDate required,
+    gender String,
+    maritalStatus String,
+    nationality String required,
+    status String required,
+    custEmail String required,
+    compIdType String required,
+    compId Long required,
+    primaryConAdminIndId Long required
+}
+
+entity CustBillArrangement{
+	billArrangementId Long,
+    statementAccNo Long,
+    billAccNo Long,
+    dueDate LocalDate,
+    cycleDate LocalDate,
+    promiseToPayDate LocalDate,
+    startDate LocalDate,
+    status String,
+    createdDate Instant,
+    statusDate LocalDate,
+    statusReason String,
+    statementFormatId String
+}
+
+entity CustCommunicationRef	{
+	customerNotificationId	String required,
+    role String required,
+    status String
+}
+
+entity CustChar {
+	name String required,
+	value String required,
+	valueType String required
+}
+entity CustSecurityChar{
+	name String required,
+	value String required,
+	valueType String required
+}
+entity CustPasswordChar {
+	name String required,
+	value String required,
+	valueType String required
+}
+
+
+
+entity CustBillingAcc{
+	name String required,
+	href String required,
+	status String required,
+	description String,
+	billingAccountNumber Long required,
+	currencyCode String required
+}
+
+entity CustCreditProfile {
+	custIdTypeOne String required,
+	custIdRefOne String required,
+	custIdTypeTwo String required,
+	custIdRefTwo String required,
+	creditCardNumber Long required,
+	creditProfileData Instant required,
+	creditRiskRating String required,
+	creditRiskRatingDesc String,
+	creditScore Integer required,
+	validUntil Instant required,
+}
+
+entity CustPaymentMethod{
+	name String required,
+	description String,
+	preferred Boolean required,
+	type String required,
+	authorizationCode Integer required,
+	status String required,
+	statusDate Instant required,
+	details String required
+}
+
+entity CustContact {
+	name String required,
+	description String,
+	preferred Boolean required,
+	type String required,
+	validFrom Instant required,
+	validTo Instant required
+}
+
+entity CustContactChar{
+	type String required,
+	streetOne String,
+	streetTwo String ,
+	city String required,
+	stateOrProvince String required,
+	country String required,
+	postCode Long required,
+	phoneNumber Long required,
+	emailAddress String required,
+	faxNumber Long required,
+	latitude BigDecimal,
+	longitude BigDecimal,
+	svContactId Integer required,
+	isEmailValid Boolean,
+	isAddressValid Boolean
+}
+
+entity GeographicSiteRef {
+	siteRef String required,
+	location String required
+}
+
+
+entity CustIsvRef {
+	isvId Integer required,
+	isvName String required,
+	isvCustId Long required
+}
+
+entity CustIsvChar{
+	name String required,
+	value Integer required,
+	valueType String required
+}
+
+entity RoleTypeRef{
+	roleName String required,
+	roleType String required
+}
+
+entity CustRelParty {
+	name String required,
+	roleId Long required,
+	validFrom Instant required,
+	validTo Instant required
+}
+
+entity ShoppingSessionRef{
+	href String,
+	shoppingSessionId String required,
+	status String required,	
+	sessionAbondoned Boolean required,
+	channel String required,
+    userId Long
+}
+
+entity Individual{
+	title String required,
+	firstName String required,
+	lastName String required,
+	middleName String,
+	formattedName String required,
+	dateOfBirth LocalDate required,
+	gender String required,
+	maritalStatus String,
+	nationality String required,
+	status String
+}
+
+entity IndAuditTrial{
+	name String required,
+	activity String required,
+    createdDate Instant,
+}
+
+
+entity IndContact{
+	preferred String required,
+	type String required,
+	validFrom Instant required,
+	validTo Instant required
+
+}
+
+entity IndContactChar{
+	type String required,
+	streetOne String,
+	streetTwo String,
+	city String required,
+	stateOrProvince String required,
+	country String required,
+	postCode Long required,
+	phoneNumber Long required,
+	emailAddress String,
+	faxNumber Long required,
+	latitude BigDecimal required,
+	longitude BigDecimal required,
+	svContactId Long required,
+	isEmailValid Boolean ,
+	isAddressValid Boolean
+}
+
+entity IndChar{
+	name String required,
+	value Boolean required,
+	valueType String required
+}
+
+entity Department{
+	name String required,
+	departmentHead String required,
+	status String required
+}
+entity IndActivation {
+	name String required,
+	activity String required
+}
+
+entity NewsLetterType {
+	newLetterType String required,
+	displayValue String required,
+	description String,
+	status String required
+}
+
+entity Industry {
+	name String required,
+	code String required,
+	description String
+}
+
+entity CustNewsLetterConfig {
+	newLetterTypeId Long required,
+	value String required
+}
+
+entity IndNewsLetterConf {
+	newLetterTypeId Long required,
+	value String required
+}
+
+entity AutoPay {
+	channel String required,
+	autoPayId Long required,
+	debitDate LocalDate required,
+	status String required
+}
+
+entity Eligibility {
+	noOfLines Integer required,
+	creditAmount BigDecimal required,
+	description String,
+	isEligiblePaylater Boolean required
+}
+
+entity CreditCheckVerification {
+	verQuestion String required,
+	verQuestionChoice String required,
+	verAnswer String required
+}
+
+entity BankCardType {
+	brand String required,
+	cardType String required,
+	cardNumber Long required,
+	expirationDate Instant required,
+	cvv Integer required,
+	lastFourDigits Integer required,
+	bank String required
+}
+
+entity CustStatistics {
+	name String required,
+	value String required,
+	valuetype String required
+}
+
+entity CustBillingRef {
+	amountDue BigDecimal required,
+	billDate Instant required,
+	billNo Long required,
+	billingPeriod Instant required,
+	category String required,
+	href String required,
+	lastUpdatedDate Instant required,
+	nextUpdatedDate Instant required,
+	paymentDueDate Instant required,
+	state String required,
+	taxExcludedAmount BigDecimal required,
+	taxIncludedAmount BigDecimal required
+}
+
+relationship OneToOne {
+	CustContact to GeographicSiteRef,
+	CustContact to CustContactChar,
+	Individual to IndActivation,
+	Individual to IndNewsLetterConf,
+	ShoppingSessionRef to Individual,	
+	Customer to CustBillingAcc,
+    Customer to CustBillArrangement,
+	Industry to Customer,
+    CustBillArrangement to AutoPay
+}
+
+relationship OneToMany {
+	Customer to CustContact,
+	Customer to CustStatistics,
+    Customer to CustChar,
+    Customer to CustSecurityChar,
+    Customer to CustIsvRef,
+    Customer to CustRelParty,
+	Customer to CustCommunicationRef,
+	Customer to CustPasswordChar,
+	Customer to CustNewsLetterConfig,
+	Customer to CustCreditProfile,
+	Customer to CustBillingRef,
+    Customer to ShoppingSessionRef,
+    CustPaymentMethod to CustBillingRef,
+    CustPaymentMethod to BankCardType,
+    NewsLetterType to CustNewsLetterConfig,
+    NewsLetterType to IndNewsLetterConf,
+	Individual to IndAuditTrial,
+    Individual to IndChar,
+    Individual to IndContact,
+	IndContact to IndContactChar,
+   	RoleTypeRef to CustRelParty,
+	CustIsvRef to CustIsvChar,
+	Department to CustRelParty
+}
+
+relationship ManyToOne {
+  CustRelParty to Individual
+}
+
+service all with serviceImpl
+dto all with mapstruct
+filter all
+
